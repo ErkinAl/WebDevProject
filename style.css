@@ -1,0 +1,412 @@
+*{
+    box-sizing: border-box;
+    /*box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2) */
+
+}
+/* Main Body */
+body{
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+}
+/* Top Head Bar */
+.headBarTop{
+    display: flex;
+    background-color: rgb(160, 7, 7);
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+/* Top Head Bar Lion Image */
+.headBarTop img{
+    width: 4rem;
+    margin-left: 0.5rem;  
+    margin-right: 0.5rem;
+}
+/* Top Head Bar Title */
+.headBarTop strong{
+    font-family: 'Brush Script MT', cursive;
+    color: white;
+    font-size: 2rem;
+}
+/* Top Navigation Bar */
+.navBarTop{
+    border: solid rgb(107, 0, 0) 0.2rem;
+    background-color:rgb(160, 7, 7);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+/* Top Navigation Bar Items */
+.navBarTop a{
+    color: white;
+    border: solid black 0.2rem;
+    border-style:groove;
+    width:10rem;
+    text-align: center;
+    font-size: 1.4em;
+    align-items: center;
+    height: 3rem;
+    padding-top: 0.5rem;
+    text-decoration: none;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+.navBarTop a:hover{
+    color: white;
+    width: 14rem;
+    background-color: rgb(117, 0, 0);
+}
+.navBarTop img{
+    height:3rem;
+}
+/* Page Main Section */
+section{
+    display: flex;
+    background-color: rgb(117, 0, 0);
+}
+/* Left Side Bar */
+.leftSideBar{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(160, 7, 7);
+    align-items: center;
+    width: 20%;
+    border: solid black 0.5rem;
+    border-style:double;
+    height: 80%; 
+    width: 20%;
+    position: fixed; /* Fixed Sidebar */
+    z-index: 1;
+    left: 0;
+}
+/* Left Side Bar Currency Boxes */
+.leftSideBar div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(163, 60, 60);
+    border: solid black 1em;
+    border-style:ridge;
+    margin: 1.5rem;
+    width: 15rem;
+    height: 6rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.leftSideBar img{
+    width: 2rem;
+}
+.leftSideBar a{
+    padding-left: 0.2rem;
+    color: white;
+    text-decoration: none;
+}
+.leftSideBar div:hover{
+    color: white;
+    width: 16rem;
+    background-color: rgb(117, 0, 0);
+}
+
+/* Middle Bar */
+.middleBar{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(163, 60, 60);
+    width: 60%;
+    border: solid black 0.2rem;
+    background-image:url("./assets/borderlessEmblemOpacity2.png");
+    background-size: cover;
+    color: white;
+    font-size: 2rem;
+    margin-left: 20%;
+}
+/* Welcome and Slogan */
+.slogan{
+    border: solid black;
+    color: rgb(241, 208, 208);
+    text-align: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+/* Main Page of the Bank */
+.middleBar .mainStrings{
+    padding-right: 5rem;
+    padding-left: 5rem;
+    padding-bottom: 3rem;
+}
+.mainStrings h1{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: solid black;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+    width:fit-content;
+    background-color: rgb(117, 0, 0);
+}
+
+/* Right Side Bar */
+.rightSideBar{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(160, 7, 7);
+    /*justify-content: center;*/
+    align-items: center;
+    width: 20%;
+    border: solid black 0.5rem;
+    border-style:double;
+}
+/* Right Side Bar Account Box (Redblood Bank, one for all)*/
+.accountBox{
+    border: solid black 0.4rem;
+    border-style: ridge;
+    background-color: rgb(163, 60, 60);
+    width: 15rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    color: white;
+    margin: 1rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+.accountBox img{
+    margin-top: 1rem;
+    border: solid black;
+    width: 4rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+.accountDetails{
+    margin-top: 1rem;
+    border: solid black;
+    width: 10rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-bottom: 1rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+.accountDetails:hover{
+    width: 10rem;
+    background-color: rgb(117, 0, 0);
+}
+/* Right Side Bar Balance Box*/
+.balanceBox{
+    background-color: rgb(163, 60, 60);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black;
+    margin: 1rem;
+    width: 15rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+.balanceBox p{
+    border: solid black;
+    width: 9rem;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.balanceBox p:hover{
+    width: 11rem;
+    background-color: rgb(117, 0, 0);
+}
+.balanceBox img{
+    width: 4rem;
+    margin-bottom: 1rem;
+}
+/* Right Side Transactions Box*/
+.tranfBox{
+    border: solid black;
+    background-color: rgb(163, 60, 60);
+    width: 15rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+.tranfBox div{
+    border: solid black;
+    text-align: center;
+    width: 10rem;
+    margin-top: 0.1rem;
+    margin-bottom: 1rem;
+    color: white;
+    height: 3rem;
+    padding-top: 0.5rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+}
+.tranfBox div:hover{
+    width: 11rem;
+    background-color: rgb(117, 0, 0);
+}
+.tranfBox p{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+.tranfBox span{
+    color: wheat;
+}
+/* Right Side Bar Advertisement */
+.advertBox{
+    border: solid black;
+    background-color: rgb(163, 60, 60);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    color: white;
+    width: 22.1rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.advertBox a{
+    border: solid black;
+    color: white;
+    width: 9rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-decoration: none;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+.advertBox img{
+    border: solid black;
+    width: 21rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.advertBox a:hover{
+    width: 11rem;
+    background-color: rgb(117, 0, 0);
+}
+/* Right Side Bar News */
+.newsBoxes{
+    background-color: rgb(163, 60, 60);
+    border: solid black;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    border-radius: 3rem;
+    color: white;
+    background-image: url(./assets/borderFlag2Opacityy.png);
+    background-repeat: round;
+    background-size: cover;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+    margin-bottom: 2rem;
+}
+.newsBoxes h2{
+    border: solid rgb(117, 0, 0);
+    text-align: center;
+    width: 10rem;
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+.newsBoxes h4{
+    border: solid rgb(117, 0, 0);
+    width: 14rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+}
+.newsBoxes a{
+    text-decoration: none;
+    color: white;
+}
+.newsBoxes h2:hover{
+    color: white;
+    width: 10rem;
+    background-color: rgb(117, 0, 0);
+    border: solid black;
+}
+.newsBoxes h4:hover{
+    color: white;
+    width: 15rem;
+    background-color: rgb(117, 0, 0);
+    border: solid black;
+}
+/* Social Media Accounts - Links */
+.socialNetwork{
+    display: flex;
+    direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(163, 60, 60);
+    position: sticky;
+    z-index: 3;
+}
+.socialNetwork div{
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    width: 15rem;
+    background-color: rgb(134, 44, 44);
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+.socialNetwork a{
+    text-decoration: none;
+    color: white;
+}
+.socialNetwork img{
+    width: 4rem;
+}
+.socialNetwork div:hover{
+    width: 17rem;
+    background-color: rgb(117, 0, 0);
+}
+/* Footer - Copytight */
+.footerWImages{
+    z-index: 1000;
+    background-color: rgb(61, 0, 0);
+    border: solid black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: sticky;
+    z-index: 1;
+}
+.footerWImages img{
+    width: 3rem;
+}
+/* Responsive Part */
+@media (max-width: 1200px) {
+    *{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navBarTop img{
+        display: none;
+    }
+    .leftSideBar{
+        display: none;
+    }
+    .middleBar{
+        display: none;
+    }
+    .newsBoxes{
+        display: none;
+    }
+    .advertBox{
+        display: none;
+    }
+}
