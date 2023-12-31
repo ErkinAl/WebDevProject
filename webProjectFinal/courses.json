@@ -1,0 +1,56 @@
+[
+    {
+        "courseId":6,
+        "courseName":"Android Application Development",
+        "courseInstructor":"Özgür Kılıç",
+        "midterm":40,
+        "final":60,
+        "acts":7,
+        "tenBased":false
+    },
+    {
+        "courseId":1,
+        "courseName":"Database Management Systems",
+        "courseInstructor":"Tuğba Süzek",
+        "midterm":40,
+        "final":60,
+        "acts":6,
+        "tenBased":true
+    },
+    {
+        "courseId":2,
+        "courseName":"Computer Networks",
+        "courseInstructor":"Enis Karaarslan",
+        "midterm":40,
+        "final":60,
+        "acts":6,
+        "tenBased":true
+    },
+    {
+        "courseId":3,
+        "courseName":"Principles of Kemal Atatürk",
+        "courseInstructor":"Tuğba Çalışkan",
+        "midterm":40,
+        "final":60,
+        "acts":2,
+        "tenBased":true
+    },
+    {
+        "courseId":4,
+        "courseName":"Turkish",
+        "courseInstructor":"Fatma Ayan",
+        "midterm":40,
+        "final":60,
+        "acts":2,
+        "tenBased":true
+    },
+    {
+        "courseId":5,
+        "courseName":"Calculus",
+        "courseInstructor":"Dilara Çalışkan",
+        "midterm":40,
+        "final":60,
+        "acts":6,
+        "tenBased":true
+    }
+]

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!--JS Scripts-->
+    <script type="module" src="./home.js" defer></script>
+    <script type="module" src="./student.js" defer></script>          
+    <script type="module" src="./course.js" defer></script>
+    <script src="./courses.json" defer></script>          
+    <script src="./students.json" defer></script>
+    <script type="module" src="./getAllStudents.js" defer></script>
+    <script type="module" src="./getAllCourses.js" defer></script>          
+    <title>Firestorm Academy</title>
+</head>
+<body>
+    <!--Firestorm Academy-->
+    <!--Head Bar - Name of the University-->
+    <div class="headBarTop">
+        <img class="headBarImage" src="./assets/DragonWithBoders.png" alt="">
+        <strong>Firestorm Academy</strong>
+        <img class="headBarImage" src="./assets/DragonWithBoders.png" alt="">
+    </div>
+    <!--Navigation Bar with Texts-->
+    <nav>
+        <div class="navLeft">
+            <button id="homeButton">
+                <img class="homeImg" src="./assets/home.png" alt="">
+                <span>Home</span>
+                <img class="homeImg" src="./assets/home.png" alt="">
+            </button>
+        </div>
+        <div class="navMiddle">
+            <p>Knowledge Is Power</p>
+        </div>
+        <div class="navRight">
+            <button id="buttonShowGrades">Grades</button>
+        </div>
+    </nav>
+    <!--Main Page-->
+    <div class="main">
+    <!--Left Side Bar With Buttons-->
+        <div class="leftSideBar">
+            <button id="buttonGetStudents">Show All Students</button>
+            <div class="dropdown">
+                <button class="dropbtn" id="buttonGetCourses">View Courses</button>
+            </div>
+            <button id="buttonGetFailedStudents">Failed Students</button>
+            <button id="buttonGetPassedStudents">Passed Students</button>   
+        </div>
+        <!--Right Side Bar With Info Acsess-->
+        <div class="rightSideBar">
+                <!-- Add Student Input Form-->
+            <form id="addStudentForm" class="hidden">
+                <label for="studentId">Student ID:</label>
+                <input type="text" id="studentId" name="id" placeholder="Student ID" required>
+                
+                <label for="studentName">Name:</label>
+                <input type="text" id="studentName" name="name" placeholder="Name" required>
+                
+                <label for="studentSurname">Surname:</label>
+                <input type="text" id="studentSurname" name="surname" placeholder="Surname" required>
+                
+                <label for="studentAge">Age:</label>
+                <input type="number" id="studentAge" name="age" placeholder="Student Age" required>
+
+                <label for="takenCourses">Taken Courses</label>
+                <input type="text" id="takenCourses" name="takenCourses" placeholder="Taken Courses" required><br>
+                
+                <label for="grades">Grades:</label>
+                <input type="text" id="grades" name="grades" placeholder="Grades"><br>
+                
+                <button type="submit" class="buttonSubmit">Add Student</button>
+
+                <span>You must write two grades seperated by comma and one Course ID.</span>
+
+            </form>
+            
+            <!-- Add Student Input Form-->
+            <form id="addCourseForm" class="hidden">
+                <label for="courseId">Course ID:</label>
+                <input type="number" id="courseId" name="courseId" placeholder="Course ID" required>
+
+                <label for="courseName">Course Name:</label>
+                <input type="text" id="courseName" name="courseName" placeholder="Course Name" required>
+
+                <label for="courseInstructor">Instructor:</label>
+                <input type="text" id="courseInstructor" name="courseInstructor" placeholder="Instructor" required>
+                
+                <label for="midterm">Midterm:</label>
+                <input type="number" id="midterm" name="midterm" placeholder="Midterm Percentage" required>
+                
+                <label for="final">Final:</label>
+                <input type="number" id="final" name="final" placeholder="Final Percentage" required>
+                
+                <label for="acts">Acts:</label>
+                <input type="number" id="acts" name="acts" placeholder="ACTS" required>
+                
+                <label for="tenBased">Is Ten Based:</label>
+                <input type="checkbox" id="tenBased" name="tenBased">
+                
+                <button type="submit" class="buttonSubmit">Add Course</button>
+            </form>
+        </div>
+    <!-- Right Side of the bar where we can see the details-->
+        <div class="mainRight">
+            <!-- Home Page of the OBS-->
+                <div class="content" id="mainPage"> 
+                    <h1><img src="./assets/ShieldedDragon1.png" alt="">Welcome to the Firestorm Academy OBS<img src="./assets/ShieldedDragon1.png" alt=""></h1>
+                    <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <h2>-Updates-</h2>
+                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, suscipit! Odio vitae veniam eos aliquam ipsam quisquam nostrum. Incidunt necessitatibus quod voluptates.</span>
+                    </span>
+                </div>
+                
+            <!-- Table that Lists Students-->
+            <input class="hidden" type="text" id="searchInputStudent" placeholder="Search by name or surname">
+            <table id="studentTable">
+                <thead>
+                    <tr class="studentTableTr">
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Age</th>
+                        <th>GPA</th>
+                        <th>Delete</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    <tbody></tbody>
+                </tbody>
+            </table>
+            <!-- Table that Lists Courses-->
+            <input class="hidden" type="text" id="searchInputCourse" placeholder="Search by course name">
+
+            <table id="coursesTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Instructor</th>
+                        <th>Midterm Percentage</th>
+                        <th>Final Percentage</th>
+                        <th>ACTS</th>
+                        <th>Is it Ten Based</th>
+                        <th>Delete Course</th>
+                    </tr>
+                </thead>
+                <tbody id="coursesTableBody"></tbody>
+            </table>
+
+            <table id="studentCoursesTable">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Courses/Grades</th>
+                    </tr>
+                </thead>
+                <tbody id="studentCoursesTableBody"></tbody>
+            <!-- Table that Lists Failed Courses-->
+                <table id="failedCoursesTable">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>Failed Courses</th>
+                        </tr>
+                    </thead>
+                    <tbody id="failedCoursesTableBody"></tbody>
+            </table>
+            <!-- Table that Lists Passed Courses-->
+            <table id="passedCoursesTable">
+                <thead>
+                    <tr>
+                        
+                    </tr>
+                </thead>
+                <tbody id="passedCoursesTableBody"></tbody>
+        </table>
+
+        </div>
+    </div>
+</body>
+</html>
